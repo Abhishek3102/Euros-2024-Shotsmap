@@ -66,10 +66,10 @@ elif plot_type == "Bar Chart":
     ax.set_title(f"Shots per Player for {nation}")
     st.pyplot(fig)
 
-    # Show goal techniques for selected player
+    # Show shot techniques and types for selected player
     if player:
-        player_details = filtered_df[['shot_technique', 'shot_outcome']]
-        st.write(f"### {player}'s Shot Techniques")
+        player_details = filtered_df[['shot_technique', 'shot_outcome', 'shot_type']]
+        st.write(f"### {player}'s Shot Techniques and Types")
         st.dataframe(player_details)
 
 elif plot_type == "Heatmap":
