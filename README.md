@@ -20,4 +20,4 @@ This Streamlit app visualizes and compares shots taken by players during the Eur
 - `euros_2024_shot_map.csv`: Contains detailed shot data including player information, shot location, and outcomes.
 - `main.py`: The Streamlit application script that loads data, allows user interaction, and generates visualizations based on selected filters.
 
-To run the app, ensure you have the necessary libraries installed and execute `streamlit run app.py`.
+To run the app, ensure you have the necessary libraries installed and execute `streamlit run main.py`.
