@@ -1,0 +1,37 @@
+name: CI/CD for Euros 2024 Shots Map
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12.6
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          # Add test commands here, if applicable
+          echo "No tests defined"
+
+      - name: Deploy to Streamlit Cloud
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Visit https://share.streamlit.io/ to deploy your Streamlit app."
