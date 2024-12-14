@@ -41,3 +41,4 @@ This Streamlit app visualizes and compares shots taken by players during the Eur
 - `main.py`: The Streamlit application script that loads data, allows user interaction, and generates visualizations based on selected filters.
 
 To run the app, ensure you have the necessary libraries installed and execute `streamlit run main.py`.
+Docker command to run this project : docker run -p 8501:8501 abhishekdocks/euros-2024-shotsmap:latest.
